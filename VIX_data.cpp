@@ -32,28 +32,28 @@ VIX::VIX(){
 void VIX :: data(){
     double value; 
     std::ifstream infile;
-    infile.open("/users/sunitaupadhyay/Desktop/vix_open.txt", std::ifstream::binary);
+    infile.open("/users/USER/Desktop/vix_open.txt", std::ifstream::binary);
     for(int i = 0; i<size; i++)
     {
         infile>>value;
         open.push_back(value);
     }
     
-    infile.open("/users/sunitaupadhyay/Desktop/vix_high.txt", std::ifstream::binary);
+    infile.open("/users/USER/Desktop/vix_high.txt", std::ifstream::binary);
     for(int i = 0; i<size; i++)
     {
         infile>>value;
         high.push_back(value);
     }
     
-    infile.open("/users/sunitaupadhyay/Desktop/vix_low.txt", std::ifstream::binary);
+    infile.open("/users/USER/Desktop/vix_low.txt", std::ifstream::binary);
     for(int i = 0; i<size; i++)
     {
         infile>>value;
         low.push_back(value);
     }
     
-    infile.open("/users/sunitaupadhyay/Desktop/vix_close.txt", std::ifstream::binary);
+    infile.open("/users/USER/Desktop/vix_close.txt", std::ifstream::binary);
     for(int i = 0; i<size; i++)
     {
         infile>>value;
