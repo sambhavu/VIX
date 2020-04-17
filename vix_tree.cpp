@@ -8184,12 +8184,12 @@ if(d1<0 && d2>0 && d3>0 && d4>0)
 
 int main(){ 
 
-vol vix;
-vix.tree(); 
+vol v;
+v.tree(); 
 
 double pos, profit,totalprofit;
 
-for(int i=1;i<=DATA;i++)
+for(int i=1;i<=v.DATA;i++)
 
    {
 
@@ -8197,7 +8197,7 @@ for(int i=1;i<=DATA;i++)
       
       profit=0;
 
-      pos=vix.trade(i-1);
+      pos=v.trade(i-1);
 
       profit= (vix[i]-vix[i-1])*pos;
 
