@@ -7540,6 +7540,8 @@ void tree();
 void calc();
 void show_tree();
 
+double trade(int t);
+
 double uuuuu;
 double uuudu;
 double uuddu; 
@@ -7939,11 +7941,273 @@ cout<<"ddudd: "<<ddudd<<"\n";
 } 
 
 
+double vol::trade(int t){ 
+
+if(t<4){
+return 0;
+}
+
+double p1,p2;
+
+double d1, d2, d3, d4; 
+d4=vix[t]-vix[t-1];
+d3=vix[t-1]-vix[t-2];
+d2=vix[t-2]-vix[t-3];
+d1=vix[t-3]-vix[t-4];
+
+if(d1>0 && d2>0 && d3>0 && d4>0)
+{ 
+   p1=uuuuu/total;
+   p2=uuuud/total;
+
+   if(p1>p2){
+        return 1; 
+   } 
+   else {
+        return -1;
+   } 
+} 
+
+if(d1>0 && d2<0 && d3>0 && d4>0)
+{
+   p1=uduuu/total;
+   p2=uduud/total;
+
+   if(p1>p2){
+      return 1;
+   }
+
+    else{
+      return -1; 
+    }   
+}
+
+if(d1>0 && d2>0 && d3>0 && d4<0)
+{
+   p1=uuudu/total;
+   p2=uuudd/total;
+
+   if(p1>p2){
+        return 1; 
+   }
+   else {
+        return -1;
+   } 
+
+}
+
+if(d1>0 && d2>0 && d3<0 && d4>0)
+{
+   p1=uuduu/total;
+   p2=uudud/total;
+
+   if(p1>p2){
+        return 1;
+    } 
+    else{
+        return -1;
+    } 
+} 
+
+if(d1>0 && d2>0 && d3<0 && d4<0)
+{
+   p1=uuddu/total;
+   p2=uuddd/total;
+
+   if(p1>p2){
+      return 1;
+   }
+
+    else{
+      return -1; 
+    }   
+}
+
+if(d1>0 && d2<0 && d3<0 && d4<0)
+{
+   p1=udddu/total;
+   p2=udddd/total;
+
+   if(p1>p2){
+      return 1;
+   }
+
+    else{
+      return -1; 
+    }   
+}
+
+if(d1>0 && d2<0 && d3>0 && d4<0)
+{
+   p1=ududu/total;
+   p2=ududd/total;
+
+   if(p1>p2){
+      return 1;
+   }
+
+    else{
+      return -1; 
+    }   
+}
+
+if(d1>0 && d2<0 && d3<0 && d4>0)
+{
+   p1=udduu/total;
+   p2=uddud/total;
+
+   if(p1>p2){
+      return 1;
+   }
+
+    else{
+      return -1; 
+    }   
+}
+
+if(d1<0 && d2<0 && d3<0 && d4<0)
+{
+   p1=ddddu/total;
+   p2=ddddd/total;
+
+   if(p1>p2){
+      return 1;
+   }
+
+    else{
+      return -1; 
+    }   
+}
+
+if(d1<0 && d2<0 && d3<0 && d4>0)
+{
+   p1=ddduu/total;
+   p2=ddddd/total;
+
+   if(p1>p2){
+      return 1;
+   }
+
+    else{
+      return -1; 
+    }   
+}
+
+if(d1<0 && d2<0 && d3>0 && d4<0)
+{
+   p1=ddudu/total;
+   p2=ddudd/total;
+
+   if(p1>p2){
+      return 1;
+   }
+
+    else{
+      return -1; 
+    }   
+}
+
+if(d1<0 && d2>0 && d3<0 && d4<0)
+{
+   p1=duddu/total;
+   p2=duddd/total;
+
+   if(p1>p2){
+      return 1;
+   }
+
+    else{
+      return -1; 
+    }   
+}
+
+if(d1<0 && d2<0 && d3>0 && d4>0)
+{
+   p1=dduuu/total;
+   p2=dduud/total;
+
+   if(p1>p2){
+      return 1;
+   }
+
+    else{
+      return -1; 
+    }   
+}
+
+if(d1<0 && d2>0 && d3>0 && d4<0)
+{
+   p1=duudu/total;
+   p2=duudd/total;
+
+   if(p1>p2){
+      return 1;
+   }
+
+    else{
+      return -1; 
+    }   
+}
+
+if(d1<0 && d2>0 && d3<0 && d4>0)
+{
+   p1=duduu/total;
+   p2=dudud/total;
+
+   if(p1>p2){
+      return 1;
+   }
+
+    else{
+      return -1; 
+    }   
+}
+
+if(d1<0 && d2>0 && d3>0 && d4>0)
+{
+   p1=duuuu/total;
+   p2=duuud/total;
+
+   if(p1>p2){
+      return 1;
+   }
+
+    else{
+      return -1; 
+    }   
+}
+
+
+
+
+}
+
 int main(){ 
 
 vol vix;
 vix.tree(); 
-vix.show_tree();
+
+double pos, profit,totalprofit;
+
+for(int i=1;i<=DATA;i++)
+
+   {
+
+      pos=0;
+      
+      profit=0;
+
+      pos=vix.trade(i-1);
+
+      profit= (vix[i]-vix[i-1])*pos;
+
+      totalprofit+=profit;
+
+
+    }
+cout<<totalprofit; 
+
+
 
 
 
