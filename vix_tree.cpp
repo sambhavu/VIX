@@ -7530,12 +7530,15 @@ const double vix[7518] = {
 
 
 
-class research{
+class vol{
 public: 
+
+double total; 
 
 int DATA =7518;
 void tree(); 
-
+void calc();
+void show_tree();
 
 double uuuuu;
 double uuudu;
@@ -7584,7 +7587,7 @@ double ddudd;
 
 }; 
 
-void research::tree(){ 
+void vol::tree(){ 
 
   for(int i=0; i<=DATA-5; i++){
      
@@ -7862,24 +7865,87 @@ void research::tree(){
 
       }
    } ///End of For Loop
+   calc();
+} 
+
+
+
+
+void vol::calc(){
+
+double s1;
+double s2;
+double s3;
+double s4;
+
+s1= uuuuu + uuudu+uuddu+udddu+ddddu+uuduu+uduuu+duuuu;
+
+s2= udduu+dduuu+ddduu+duudu+ duddu+ duduu+ uduuu+ ddudu;
+
+s3=uuuud+uuudd+uuddd+udddd+ddddd+ uudud+ uduud+ duuud;
+
+s4=uddud+dduud+dddud+duudd+duddd+dudud+uduud+ddudd;
+
+total=s1+s2+s3+s4;
+
+} 
+
+void vol::show_tree(){
+
+cout<<"\n\n";
+
+cout<<"uuuuu: "<<uuuuu<<"\n";
+cout<<"uuudu: "<<uuudu<<"\n";
+cout<<"uuddu: "<<uuddu<<"\n";
+cout<<"udddu: "<<udddu<<"\n";
+
+cout<<"ddddu: "<<ddddu<<"\n";
+cout<<"uuduu: "<<uuduu<<"\n";
+cout<<"uduuu: "<<uduuu<<"\n";
+cout<<"duuuu: "<<duuuu<<"\n";
+
+cout<<"udduu: "<<udduu<<"\n";
+cout<<"dduuu: "<<dduuu<<"\n";
+cout<<"ddduu: "<<ddduu<<"\n";
+cout<<"duudu: "<<duudu<<"\n";
+
+cout<<"duddu: "<<duddu<<"\n";
+cout<<"duduu: "<<duduu<<"\n";
+cout<<"uduuu: "<<uduuu<<"\n";
+cout<<"ddudu: "<<ddudu<<"\n";
+
+
+cout<<"uuuud: "<<uuuud<<"\n";
+cout<<"uuudd: "<<uuudd<<"\n";
+cout<<"uuddd: "<<uuddd<<"\n";
+cout<<"udddd: "<<udddd<<"\n";
+
+
+cout<<"ddddd: "<<ddddd<<"\n";
+cout<<"uudud: "<<uudud<<"\n";
+cout<<"uduud: "<<uduud<<"\n";
+cout<<"duuud: "<<duuud<<"\n";
+
+cout<<"uddud: "<<uddud<<"\n";
+cout<<"dduud: "<<dduud<<"\n";
+cout<<"dddud: "<<dddud<<"\n";
+cout<<"duudd: "<<duudd<<"\n";
+
+cout<<"duddd: "<<duddd<<"\n";
+cout<<"dudud: "<<dudud<<"\n";
+cout<<"uduud: "<<uduud<<"\n";
+cout<<"ddudd: "<<ddudd<<"\n";
+
 } 
 
 
 int main(){ 
 
-research vix;
-vix.direction();
-cout<<"Number of up moves: "<<vix.up;
-cout<<"\nNumber of two up moves: "<<vix.up2; 
-cout<<"\nNumber of three up moves: "<<vix.up3;
-cout<<"\n\n";
-
-cout<<"\nNumber of down moves: "<<vix.down;
-cout<<"\nNumber of two down moves: "<<vix.down2;
-cout<<"\nNumber of three down moves: "<<vix.down3;
+vol vix;
+vix.tree(); 
+vix.show_tree();
 
 
-cout<<"\n\nNumber of VIX Data points<<: "<<vix.DATA;
 
 return 0;
 
