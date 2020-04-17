@@ -7534,37 +7534,334 @@ class research{
 public: 
 
 int DATA =7518;
-void direction(); 
+void tree(); 
 
-int up, down, up2, down2, up3, down3;
+
+double uuuuu;
+double uuudu;
+double uuddu; 
+double udddu;
+
+double ddddu; 
+double uuduu; 
+double uduuu;
+double duuuu;
+
+double udduu;
+double dduuu;
+double ddduu;
+double duudu;
+
+double duddu;
+double duduu;
+double uduuu;
+double ddudu;
+
+
+
+double uuuud;
+double uuudd;
+double uuddd;
+double udddd;
+
+double ddddd;
+double uudud;
+double uduud;
+double duuud;
+
+double uddud;
+double dduud;
+double dddud;
+double duudd;
+
+double duddd;
+double dudud;
+double uduud;
+double ddudd;
+
+
+
 
 }; 
 
-void research::direction(){ 
+void research::tree(){ 
 
-  for(int i=1; i<=DATA; i++){
-        if(vix[i]-vix[i-1]>0){ 
-              up++;
-              if(vix[i-1]-vix[i-2]>0){ 
-                  up2++; 
-                  if(vix[i-2]-vix[i-3]>0){ 
-                    up3++; 
-                 }
-          
-             } 
+  for(int i=0; i<=DATA-5; i++){
+     
+      if(vix[i+1]-vix[i]>0)
+      { 
+   
+         if(vix[i+2]-vix[i+1]>0)
+         { 
+            if(vix[i+3]-vix[i+2]>0)
+            {
+    
+               if(vix[i+4]-vix[i+3]>0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                       uuuuu+=1;
+                   } 
+                  
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                       uuuud+=1;
+     
+                   } 
+              
+                }
+
+                if(vix[i+4]-vix[i+3]<0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                        uuudu+=1;
+                   } 
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                        uuudd+=1; 
+                   } 
+                }
+
+            }
+
+            if(vix[i+3]-vix[i+2]<0)
+            {
+               if(vix[i+4]-vix[i+3]>0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                       uuduu+=1;
+                   } 
+                  
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                      uudud+=1;
+
+                   } 
+              
+                }
+
+                if(vix[i+4]-vix[i+3]<0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   { 
+                        uuddu+=1;
+                   } 
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                        uuddd+=1;
+                   } 
+                }
+            } 
+
          } 
 
+         if(vix[i+2]-vix[i+1]<0)
+         {
+            if(vix[i+3]-vix[i+2]>0)
+            {
+    
+               if(vix[i+4]-vix[i+3]>0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                       uduuu+=1;
+                   } 
+                  
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                      uduud+=1;
+                   } 
+              
+                }
 
-         else if(vix[i]-vix[i-1]<0){
-              down++;
-               if(vix[i-1]-vix[i-2]<0){
-                  down2++;
-                  if(vix[i-2]-vix[i-3]){ 
-                    down3++; 
-                  }
+                if(vix[i+4]-vix[i+3]<0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                       ududu+=1;
+                   
+                   } 
+                   if(vix[i+5]-vix[i+4]<0)
+                   { 
+                        ududd+=1;
+                   } 
+                }
+
+            }
+
+            if(vix[i+3]-vix[i+2]<0)
+            {
+              
+               if(vix[i+4]-vix[i+3]>0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                       udduu+=1;
+                   } 
+                  
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                       uddud+=1;
+                   } 
+              
+                }
+
+                if(vix[i+4]-vix[i+3]<0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                       udddu+=1;
+                   } 
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                       udddd+=1;
+                   } 
+                }
             } 
-         }
-   } 
+
+
+         } 
+
+      }
+      
+      if(vix[i+1]-vix[i]<0)
+      { 
+          
+         if(vix[i+2]-vix[i+1]>0)
+         { 
+            if(vix[i+3]-vix[i+2]>0)
+            {
+    
+               if(vix[i+4]-vix[i+3]>0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                       duuuu+=1;
+                   } 
+                  
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                      duuud+=1;
+                   } 
+              
+                }
+
+                if(vix[i+4]-vix[i+3]<0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                     duudu+=1;
+                   } 
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                     duudd+=1;
+                   } 
+                }
+
+            }
+
+            if(vix[i+3]-vix[i+2]<0)
+            {
+              
+               if(vix[i+4]-vix[i+3]>0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                       duduu+=1;
+                   } 
+                  
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                       dudud+=1;
+                   } 
+              
+                }
+
+                if(vix[i+4]-vix[i+3]<0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                       duddu+=1;
+                   } 
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                       duddd+=1;
+                   } 
+                }
+            } 
+
+         } 
+
+         if(vix[i+2]-vix[i+1]<0)
+         {
+            if(vix[i+3]-vix[i+2]>0)
+            {
+    
+               if(vix[i+4]-vix[i+3]>0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                       dduuu+=1;
+                   } 
+                  
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                       dduud+=1;
+                   } 
+              
+                }
+
+                if(vix[i+4]-vix[i+3]<0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                       ddudu+=1;
+                   } 
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                       ddudd+=1;
+                   } 
+                }
+
+            }
+
+            if(vix[i+3]-vix[i+2]<0)
+            {
+              
+               if(vix[i+4]-vix[i+3]>0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                       ddduu+=1;
+                   } 
+                  
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                       dddud+=1;
+                   } 
+              
+                }
+
+                if(vix[i+4]-vix[i+3]<0)
+                {
+                   if(vix[i+5]-vix[i+4]>0)
+                   {
+                       ddddu+=1;
+                   } 
+                   if(vix[i+5]-vix[i+4]<0)
+                   {
+                       ddddd+=1;
+                   } 
+                }
+            } 
+
+
+         } 
+
+      }
+   } ///End of For Loop
 } 
 
 
