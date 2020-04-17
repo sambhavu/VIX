@@ -7534,20 +7534,35 @@ class research{
 public: 
 
 int DATA =7518;
-int direction(); 
+void direction(); 
 
-int up, down;
+int up, down, up2, down2, up3, down3;
 
 } 
 
-int research::direction(){ 
+void research::direction(){ 
 
-  for(int i=; i<=DATA; i++){
+  for(int i=1; i<=DATA; i++){
         if(vix[i]-vix[i-1]>0){ 
               up++;
+              if(vix[i-1]-vix[i-2]>0){ 
+                  up2++; 
+                  if(vix[i-2]-vix[i-3]>0){ 
+                    up3++; 
+                 }
+          
+             } 
          } 
+
+
          else if(vix[i]-vix[i-1]<0){
               down++;
+               if(vix[i-1]-vix[i-2]<0){
+                  down2++;
+                  if(vix[i-2]-vix[i-3]){ 
+                    down3++; 
+                  }
+            } 
          }
    } 
 } 
@@ -7556,8 +7571,15 @@ int research::direction(){
 int main(){ 
 
 research vix;
+vix.direction();
 cout<<"Number of up moves: "<<vix.up;
+cout<<"\nNumber of two up moves: "<<vix.up2; 
+cour<<"\nNumber of three up moves: "<<vix.up3;
 cout<<"\nNumber of down moves: "<<vix.down;
+cout<<"\nNumber of two down moves: "<<vix.down2;
+cout<<"\nNumber of three down moves: "<<vix.down3;
+
+
 cout<<"\n\nNumber of VIX Data points<<: "<<vix.DATA;
 
 return 0;
