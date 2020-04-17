@@ -7575,6 +7575,8 @@ vix.direction();
 cout<<"Number of up moves: "<<vix.up;
 cout<<"\nNumber of two up moves: "<<vix.up2; 
 cout<<"\nNumber of three up moves: "<<vix.up3;
+cout<<"\n\n";
+
 cout<<"\nNumber of down moves: "<<vix.down;
 cout<<"\nNumber of two down moves: "<<vix.down2;
 cout<<"\nNumber of three down moves: "<<vix.down3;
