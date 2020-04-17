@@ -7538,7 +7538,7 @@ void direction();
 
 int up, down, up2, down2, up3, down3;
 
-} 
+}; 
 
 void research::direction(){ 
 
@@ -7574,7 +7574,7 @@ research vix;
 vix.direction();
 cout<<"Number of up moves: "<<vix.up;
 cout<<"\nNumber of two up moves: "<<vix.up2; 
-cour<<"\nNumber of three up moves: "<<vix.up3;
+cout<<"\nNumber of three up moves: "<<vix.up3;
 cout<<"\nNumber of down moves: "<<vix.down;
 cout<<"\nNumber of two down moves: "<<vix.down2;
 cout<<"\nNumber of three down moves: "<<vix.down3;
